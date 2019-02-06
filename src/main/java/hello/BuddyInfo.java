@@ -9,19 +9,21 @@ import javax.persistence.Id;
 public class BuddyInfo {
     private String name;
     private int age;
+    private String phoneNumber;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    public BuddyInfo(String name, int age)
+    public BuddyInfo(String name, int age, String phoneNumber)
     {
         this.name = name;
         this.age = age;
+        this.phoneNumber = phoneNumber;
     }
 
     public BuddyInfo(BuddyInfo b)
     {
-        this(b.name, b.age);
+        this(b.name, b.age, b.phoneNumber);
     }
 
     public BuddyInfo(){}
@@ -47,6 +49,10 @@ public class BuddyInfo {
         this.age = age;
     }
 
+    public String getPhoneNumber() { return phoneNumber; }
+
+    public void setPhoneNumber(String phoneNumber) { this.phoneNumber = phoneNumber; }
+
     public boolean isOver18()
     {
         return age > 18;
@@ -63,6 +69,6 @@ public class BuddyInfo {
         if(this == o) return true;
         if(!(o instanceof BuddyInfo)) return false;
         BuddyInfo b = (BuddyInfo)o;
-        return this.name.equals(b.name) && this.age == b.age;
+        return this.name.equals(b.name) && this.phoneNumber.equals(b.phoneNumber) && this.age == b.age;
     }
 }

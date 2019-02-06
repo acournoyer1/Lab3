@@ -22,11 +22,11 @@ public class Application {
         return (args) -> {
 
             // save a couple of customers
-            repository.save(new BuddyInfo("Jack", 15));
-            repository.save(new BuddyInfo("Chloe", 16));
-            repository.save(new BuddyInfo("Kim", 20));
-            repository.save(new BuddyInfo("David", 30));
-            repository.save(new BuddyInfo("Michelle", 12));
+            repository.save(new BuddyInfo("Jack", 15, "324-235-1356"));
+            repository.save(new BuddyInfo("Chloe", 16, "234-346-2341"));
+            repository.save(new BuddyInfo("Kim", 20, "234-153-1235"));
+            repository.save(new BuddyInfo("David", 30, "123-534-5464"));
+            repository.save(new BuddyInfo("Michelle", 12, "134-345-4567"));
         };
     }
 

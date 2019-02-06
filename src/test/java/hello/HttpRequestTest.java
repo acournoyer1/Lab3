@@ -47,7 +47,7 @@ public class HttpRequestTest {
     @Test
     public void testInsertObject() throws Exception {
         String url = "/buddies";
-        BuddyInfo buddy = new BuddyInfo("Alex", 22);
+        BuddyInfo buddy = new BuddyInfo("Alex", 22, "234-345-4312");
 
         ObjectMapper mapper = new ObjectMapper();
         mapper.configure(SerializationFeature.WRAP_ROOT_VALUE, false);
